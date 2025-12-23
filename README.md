@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Decentralised Identity Frontend
 
-## Getting Started
+This repository contains the frontend application for a **Decentralized Identity (DID) and Credential Verification system**. The frontend provides a secure and user-friendly interface for interacting with blockchain-based identity and credential smart contracts.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The application allows users to create and manage their **Decentralized Identity (DID)**, grant access to verifiers, and verify academic credentials in a trustless manner. Identity and credential metadata are stored on **IPFS**, while ownership, access control, and issuer authenticity are enforced on-chain using smart contracts.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Wallet-based authentication is used throughout the application, eliminating the need for traditional login systems and ensuring user sovereignty over identity data.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Create and view Decentralized Identity (DID)
+- Store DID documents on IPFS (Pinata)
+- Register DID references on-chain
+- Grant and manage access to credentials
+- Verify credentials with on-chain permission checks
+- Fetch and display credential data from IPFS
+- Wallet connection using wagmi and RainbowKit
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js (App Router)
+- TypeScript
+- wagmi & RainbowKit
+- IPFS / Pinata
+- Tailwind CSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **On-chain**: Identity ownership, access control, issuer verification
+- **Off-chain**: DID and credential documents stored on IPFS
+- **Frontend**: React-based UI for interacting with smart contracts
